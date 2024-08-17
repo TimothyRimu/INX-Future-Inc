@@ -3,4 +3,4 @@ numpy
 scikit-learn
 openpyxl
 xgboost
-imblearn.over_sampling
+imbalanced-learn
