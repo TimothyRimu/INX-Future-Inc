@@ -9,7 +9,7 @@ from imblearn.over_sampling import RandomOverSampler
 # Load and preprocess the dataset
 @st.cache_data
 def load_data():
-    df = pd.read_excel(r'\\mac\iCloud\AFRICDSA\MACHINE LEARNING\DATA SETS\INX_Future_Inc_Employee_Performance_CDS_Project2_Data_V1.8.xlsx')
+    df = pd.read_excel('INX_Future_Inc_Employee_Performance_CDS_Project2_Data_V1.8.xlsx')
     df = df.drop('EmpNumber', axis=1)  # Dropping unnecessary columns
     
     # Encoding categorical variables using OrdinalEncoder
