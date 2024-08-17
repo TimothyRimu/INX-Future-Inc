@@ -38,9 +38,9 @@ def train_model(X, y):
     # Initialize the XGBoost model and set up the parameter grid for tuning
     xgb_model = XGBClassifier(random_state=42)
     param_grid = {
-        'n_estimators': [100, 200, 300],
-        'max_depth': [3, 5, 7],
-        'learning_rate': [0.01, 0.1, 0.3]
+        'n_estimators': [100, 200],
+        'max_depth': [3, 5],
+        'learning_rate': [0.01, 0.1]
     }
     
     grid_search = GridSearchCV(estimator=xgb_model, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2)
