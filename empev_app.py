@@ -10,7 +10,7 @@ from imblearn.over_sampling import RandomOverSampler
 @st.cache_data
 def load_data():
     df = pd.read_excel('employee_performance.xlsx')
-    df = df.drop('EmpNumber', axis=1)  # Dropping unnecessary columns
+    df = df.drop(['EmpNumber','Attrition'], axis=1)  # Dropping unnecessary columns
     
     # Encoding categorical variables using OrdinalEncoder
     categorical_cols = df.select_dtypes(include=['object']).columns
